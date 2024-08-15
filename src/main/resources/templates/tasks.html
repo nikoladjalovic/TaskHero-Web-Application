@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleTasks.css">
+    <title>TaskHero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/logo.jpg">
+</head>
+<body>
+<div class="wrapper">
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="tasksCard">
+            <h1><span th:text="${username}"></span>'s Task Manager</h1>
+            <ul id="taskList">
+                <li th:each="task : ${tasks}">
+                    <div class="displayedTasks">
+                        <span class="taskText" th:text="${task.taskText}"></span>
+                        <div class="buttons">
+                            <div class="buttonUpdate">
+                                <form th:action="@{/tasks/update}" method="post">
+                                    <input class="hidden" type="hidden" name="id" th:value="${task.id}" />
+                                    <input class="hidden" type="hidden" name="username" th:value="${username}" />
+                                    <input type="text" name="taskText" placeholder="Update task" />
+                                    <input class="theUpdateButton" type="submit" value="Update" />
+                                </form>
+                            </div>
+                            <div class="buttonDelete">
+                                <form th:action="@{/tasks/delete}" method="post">
+                                    <input class="hidden" type="hidden" name="id" th:value="${task.id}" />
+                                    <input class="hidden" type="hidden" name="username" th:value="${username}" />
+                                    <input class="theDeleteButton" type="submit" value="Delete" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <form action="/tasks" method="post" id="taskForm">
+                <input type="hidden" name="username" th:value="${username}" />
+                <input type="text" id="taskText" name="taskText" placeholder="Enter your new task"><br>
+                <input type="submit" id="button3" value="Save task">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>&copy; 2024. All rights reserved.</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

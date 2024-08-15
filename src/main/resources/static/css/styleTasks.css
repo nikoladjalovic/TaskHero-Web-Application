@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caudex', serif;
+}
+
+body {
+    background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+    color: #3E362E;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #93785B;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    margin: 0 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3E362E;
+}
+
+.main {
+    flex:1;
+    display: flex;
+    padding: 20px;
+    background: url('/images/back.jpg') no-repeat center center/cover;
+    background-blend-mode: overlay;
+    background-color: rgba(172, 137, 104, 0.8);
+    align-items: center;
+    text-align: center;
+}
+
+.tasksCard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%; /* Adjust the width to make the card smaller */
+    max-width: 1000px; /* Set a maximum width */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+.tasksCard h1{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.displayedTasks{
+      margin: 10px auto; /* Adjust margin as needed */
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 2px solid #865D36;
+      border-radius: 5px;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+}
+
+li{
+    list-style: none;
+}
+
+.buttons {
+    display: flex;
+    text-align:center;
+    padding-bottom:40px;
+}
+
+.taskText {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.displayedTasks a{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+}
+
+.buttonUpdate, .buttonDelete{
+    padding-right: 10px;
+    font-weight: 900;
+    padding-left: 2px;
+    margin-left:20px;
+}
+
+.taskText {
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center; /* Vertically center the buttons */
+}
+
+/*.taskText{
+
+}*/
+
+/*.buttonUpdate{
+    background-color: lightgreen;
+    border-radius: 10px;
+}*/
+
+/*.buttonUpdate:hover{
+    cursor:pointer;
+    background-color: lightgreen;
+}*/
+
+/*.buttonDelete{
+    background-color: red;
+    border-radius: 10px;
+}*/
+
+/*.buttonDelete:hover{
+    cursor:pointer;
+    background-color: red;
+}*/
+
+
+.tasksCard form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.tasksCard form input{
+    margin: 3px 0;
+    padding: 10px;
+    border: 2px solid #865D36;
+    border-radius: 5px;
+    width: 90%; /* Adjust the input width to fit better within the smaller card */
+}
+
+#button3 {
+    width: 50%;
+    background-color: #865D36;
+    color: white;
+    font-weight: 900;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+
+#button3:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: white;
+    color: #865D36;
+    border: 2px solid #865D36;
+}
+
+.theUpdateButton{
+    background-color: lightgreen;
+    color: black;
+}
+
+.theDeleteButton{
+    background-color: red;
+    color: white;
+
+}
+
+.theUpdateButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: green;
+    color: white;
+}
+
+.theDeleteButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: darkred;
+    color: white;
+
+}
+
+.footer {
+    background-color: #93785B;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer p {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer ul li a:hover {
+    color: #3E362E;
+}
+
+

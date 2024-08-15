@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>TaskHero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/logo.jpg">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h1>TaskHero</h1>
+                <h3>Don't focus on the victory,</h3>
+                <h3 id="focus">Focus on the TASK!</h3>
+                <p>- Eric Spoelstra</p>
+            </div>
+            <div class="right">
+                <form method="post" action="" th:object="${loginRequest}">
+                    <input type="text" id="username" name="username" placeholder="Enter your Username"><br>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password"><br>
+                    <input type="submit" id="button1" value="Log in">
+                </form>
+                <p>Don't have an account? <a href="/register">Register now</a></p>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                <p>&copy; 2024. All rights reserved.</p>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
